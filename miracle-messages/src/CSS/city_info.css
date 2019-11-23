@@ -1,6 +1,7 @@
 .chapterInfo {
   width: 376px;
-  font-family: ProximaNova;
+  font-family: "ProximaNova";
+  margin-top: 58px !important;
 }
 
 .chapterTitle {
@@ -128,7 +129,7 @@
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.9px;
-  text-align: center
+  text-align: center;
 }
 
 .white {
