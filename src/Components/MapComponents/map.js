@@ -91,6 +91,7 @@ class Map extends Component {
             open={this.props.openDrawer}
             variant="persistent"
             className="slide"
+            style={{ marginTop: "58px", background: "none" }}
           >
             <IconButton
               onClick={this.closeHandler}
@@ -102,7 +103,8 @@ class Map extends Component {
                 background: "black",
                 width: "2px",
                 height: "2px",
-                margin: "5px 10px 0px 0px"
+                margin: "5px 10px 0px 0px",
+                marginTop: "58px"
               }}
             >
               <Cancel
@@ -112,7 +114,13 @@ class Map extends Component {
                 }}
               />
             </IconButton>
-            <Scrollbars style={{ width: 376 }} autoHide={true}>
+            <Scrollbars
+              style={{
+                width: 376,
+                marginTop: "58px"
+              }}
+              autoHide={true}
+            >
               <CityInfo info={popupInfo} />
             </Scrollbars>
           </Drawer>
