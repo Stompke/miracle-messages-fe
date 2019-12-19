@@ -1,7 +1,6 @@
 import React from "react"
 import "./ChapterInfo.scss"
-import FormFooter from "../Header-Footer/FormFooter"
-import FormHeader from "../Header-Footer/FormHeader"
+import { Link } from "react-router-dom"
 
 const ChapterInfo = () => {
   return (
@@ -58,20 +57,11 @@ const ChapterInfo = () => {
           </p>
         </div>
         <div>
-          <button
-            className="submitb"
-            onClick={() => {
-              if (localStorage.getItem("token")) {
-                return this.setState(prevState => ({
-                  modal: !prevState.modal
-                }))
-              } else {
-                return this.props.history.push("/user/login")
-              }
-            }}
-          >
-            I want to create a new chapter
-          </button>
+
+          <Link to="/user/newchapterform">
+            <button className="submitb">I want to create a new chapter</button>
+          </Link>
+
         </div>
       </div>
       <FormFooter />

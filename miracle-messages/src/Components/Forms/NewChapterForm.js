@@ -1,14 +1,11 @@
 import React from "react"
 import axios from "axios"
 import "./VolunteerForm.scss"
+import ChapterForm from "../dashboard/views/Chapters/ChapterForm"
 import FormFooter from "../Header-Footer/FormFooter"
 import FormHeader from "../Header-Footer/FormHeader"
-import ChapterInfo from "./ChapterInfo"
-import ChapterForm from "../dashboard/views/Chapters/ChapterForm"
 
-import { Button } from "reactstrap"
-
-class NewChapter extends React.Component {
+class NewChapterForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -102,9 +99,13 @@ class NewChapter extends React.Component {
     return (
       <div className="container">
         <FormHeader />
-        {/* <ChapterInfo /> */}
         <div>
-          <ChapterInfo />
+          <ChapterForm
+            change={this.handleInputChange}
+            chapter={this.state.chapter}
+            handleImg={this.handleImg}
+            addChapter={this.addChapter}
+          />
         </div>
         <FormFooter />
       </div>
@@ -112,4 +113,4 @@ class NewChapter extends React.Component {
   }
 }
 
-export default NewChapter
+export default NewChapterForm
