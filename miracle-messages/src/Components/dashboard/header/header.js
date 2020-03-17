@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Nav,
   Navbar,
@@ -63,10 +64,8 @@ class Header extends React.Component {
               navbar
               style={{ display: 'flex' }}
             >
-              <a
-                href='https://miracle-messages-production.netlify.com'
-                target='_blank'
-                rel='noopener noreferrer'
+              <Link
+                to='/'
                 style={{
                   height: '80%',
                   marginRight: '30px',
@@ -78,7 +77,9 @@ class Header extends React.Component {
                 }}
               >
                 Live Map
-              </a>
+              </Link>
+
+              
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret className='pro-pic'>
                   <img

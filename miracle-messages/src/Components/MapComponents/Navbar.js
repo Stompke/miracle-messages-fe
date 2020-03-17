@@ -1,6 +1,7 @@
 import React from "react"
 import logo from "../../Assets/Imgs/MM_Logo.png"
 import "./Navbar.scss"
+import { Link } from 'react-router-dom';
 
 // search bar component
 import SearchBar from "../MapComponents/SearchBar.js"
@@ -27,15 +28,17 @@ class Navbar extends React.Component {
           <div className="dropdown">
             <a className="dropbtn">GET INVOLVED</a>
             <div className="dropdown-content">
-              <a href="https://miracle-message.netlify.com/form">
+              <Link to="/form">
                 Volunteer Registration
-              </a>
-              <a href="https://miracle-message.netlify.com/user/login">
+              </Link>
+              <Link to="/user/login">
                 Volunteer Login
-              </a>
-              <a href="https://miracle-message.netlify.com/admin/login">
+              </Link>
+              <Link to="/admin/login">
                 Admin Login
-              </a>
+              </Link>
+              <Link to="/admin/login">
+              NEW ADMIN LOGIN</Link>
               <a className="not-last-child">test</a>
             </div>
           </div>
